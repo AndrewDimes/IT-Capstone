@@ -1,0 +1,12 @@
+﻿@model List<ITCapstoneQuery.Data.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AllCustomerInfo">Show All Customer Infomation</a></button>
+        <button class="btn btn-primary" type="button"><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="CustomerHistory">Customer Order History</a></button>
+    </div>
+</div>
+

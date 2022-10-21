@@ -1,0 +1,28 @@
+﻿@model List<ITCapstoneQuery.Data.User>
+@{
+    ViewData["Title"] = "All Customer Information";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <th>@item.Id</th>
+                <td>@item.firstName</td>
+                <td>@item.lastName</td>
+                <td>@item.email</td>
+                <td>@item.passwordHash</td>
+            </tr>
+        }
+    </tbody>
+</table>
