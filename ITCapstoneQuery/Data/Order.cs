@@ -1,21 +1,16 @@
 ﻿namespace ITCapstoneQuery.Data
 {
-    public class Order
+    public class orders
     {
-        public int Id { get; set; }
-        public int Userid { get; set; }
-        public float subTotal { get; set; }
-        public float tax { get; set; }
-        public float shipping { get; set; }
-        public float total { get; set; }
-        public string? firstName { get; set; }
-        public string? lastName { get; set; }
+        public int id { get; set; }
+        public string? name { get; set; }
         public string? email { get; set; }
-        public string? line1 { get; set; }
-        public string? line2 { get; set; }
+        public string? address { get; set; }
         public string? city { get; set; }
-        public string? province { get; set; }
-        public string? country { get; set; }
-        public DateTime createdAt { get; set; }
+        public string? state { get; set; }
+        public string? zip { get; set; }
+        public string? items { get; set; }
+        public int price { get; set; }
+
     }
 }

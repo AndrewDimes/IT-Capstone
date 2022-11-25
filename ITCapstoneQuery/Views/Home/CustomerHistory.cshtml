@@ -1,4 +1,4 @@
-﻿@model List<ITCapstoneQuery.Data.User>
+﻿@model List<ITCapstoneQuery.Data.users>
 @{
     ViewData["Title"] = "Customer History";
 }
@@ -9,31 +9,29 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
+            <th scope="col">Username</th>
             <th scope="col">Email</th>
         </tr>
     </thead>
     <tbody>
         @foreach(var item in Model) {
                 <tr>
-                    <th>@item.Id</th>
-                    <td>@item.firstName</td>
-                    <td>@item.lastName</td>
-                    <td>@item.email</td>
+                <td>@item.id</td>
+                <td>@item.username</td>
+                <td>@item.email</td>
                 </tr>
         }
     </tbody>
 </table>
 
-<h1>Enter the Id of the customer you wish to view</h1>
+<h1>Enter the email of the customer you wish to view</h1>
 @using (Html.BeginForm("SeeCustomerHistory", "Home", FormMethod.Post))
 {
     <table cellpadding="2" cellspacing="0" border="0">
         <tr>
-            <td>Id:</td>
+            <td>Email:</td>
             <td>
-                @Html.TextBox("Id")
+                @Html.TextBox("Email")
             </td>
         </tr>
         <tr>
@@ -42,4 +40,6 @@
         </tr>
     </table>
 }
+
+
 

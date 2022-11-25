@@ -1,4 +1,4 @@
-﻿@model List<ITCapstoneQuery.Data.User>
+﻿@model List<ITCapstoneQuery.Data.users>
 @{
     ViewData["Title"] = "All Customer Information";
 }
@@ -7,8 +7,7 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
+            <th scope="col">Username</th>
             <th scope="col">Email</th>
             <th scope="col">Password</th>
 
@@ -17,11 +16,10 @@
     <tbody>
         @foreach(var item in Model) {
             <tr>
-                <th>@item.Id</th>
-                <td>@item.firstName</td>
-                <td>@item.lastName</td>
+                <th>@item.id</th>
+                <td>@item.username</td>
                 <td>@item.email</td>
-                <td>@item.passwordHash</td>
+                <td>@item.password</td>
             </tr>
         }
     </tbody>

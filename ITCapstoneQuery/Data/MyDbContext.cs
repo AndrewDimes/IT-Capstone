@@ -12,8 +12,8 @@ namespace ITCapstoneQuery.Data
         {
 
         }
-        public DbSet<User> user => Set<User>();
-        public DbSet<Order> order => Set<Order>();
+        public DbSet<users> users => Set<users>();
+        public DbSet<orders> orders => Set<orders>();
 
 
     }

@@ -22,21 +22,21 @@ namespace ITCapstoneQuery.Controllers
         }
         public IActionResult AllCustomerInfo ()
         {
-            var users = _context.user.ToList();
+            var users = _context.users.ToList();
             return View(users);
         }
 
         public IActionResult CustomerHistory()
         {
-            var users = _context.user.ToList();
+            var users = _context.users.ToList();
             return View(users);
         }
 
         [HttpPost]
-        public ActionResult SeeCustomerHistory(string id)
+        public ActionResult SeeCustomerHistory(string email)
         {
-            var orders = _context.order.ToList();
-            ViewBag.Id = id;
+            var orders = _context.orders.ToList();
+            ViewBag.email = email;
             return View(orders);
         }
 
